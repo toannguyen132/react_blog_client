@@ -1,0 +1,5 @@
+
+const PREFIX = 'single';
+export const STATUS_LOADING = `${PREFIX}/STATUS_LOADING`;
+export const STATUS_SUCCESS = `${PREFIX}/STATUS_SUCCESS`;
+export const STATUS_ERROR = `${PREFIX}/STATUS_LOADING`;
