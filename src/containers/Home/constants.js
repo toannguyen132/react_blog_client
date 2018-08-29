@@ -1,0 +1,5 @@
+
+const HOME_BASE = 'home';
+export const STATUS_LOADING = `${HOME_BASE}/STATUS_LOADING`;
+export const STATUS_SUCCESS = `${HOME_BASE}/STATUS_SUCCESS`;
+export const STATUS_ERROR = `${HOME_BASE}/STATUS_LOADING`;
