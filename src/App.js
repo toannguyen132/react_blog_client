@@ -1,43 +1,34 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import styled from 'styled-components';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './containers/Home';
 import Container from './components/Container';
-import logo from './logo.svg';
 import './App.css';
 import ArticleSingle from './containers/ArticleSingle';
+import Navigation from './components/Navigation';
 
-const Nav = styled.ul`
-  list-style: none;
-  list-style-image: none;
-  list-style-position: outside;
-  padding: 0;
-  display: flex;
-`;
-
-const NavItem = styled.li`
-  display: block;
-
-  a{
-    display: block;
-    padding: 5px 15px;
-  }
-`;
 
 class App extends Component {
   render() {
+
+    const navitems = [
+      {
+        id: 1,
+        internal: true,
+        href: '/',
+        text: 'Home'
+      },{
+        id: 2,
+        internal: true,
+        href: '/about',
+        text: 'About'
+      }
+    ];
+
     return (
       <Router>
         <div>
           <Container>
-            <Nav>
-              <NavItem>
-                <Link to="/">Home</Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/about">about</Link>
-              </NavItem>
-            </Nav>
+            <Navigation items={navitems} />
           </Container>
           <Container>
             <Route exact path="/" component={Home}></Route>
